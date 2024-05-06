@@ -4,7 +4,6 @@ import "package:flutter/foundation.dart";
 import "package:hamzahllc/base/Injection/locator.dart";
 import "package:hamzahllc/config/app_config.dart";
 import "package:hamzahllc/services/alert_service/alert_service.dart";
-import "package:tf_dio_cache/tf_dio_cache.dart";
 
 // ignore: constant_identifier_names
 enum MethodsName { GET, POST, PUT, DELETE }
@@ -13,13 +12,6 @@ class ApiService {
   ApiService() {
     _dio = Dio()
       ..interceptors.add(LogInterceptor(responseBody: true, requestBody: true))
-      ..interceptors.add(
-        DioCacheManager(
-          CacheConfig(
-            baseUrl: _getBaseUrl(),
-          ),
-        ).interceptor,
-      )
       ..interceptors.add(InterceptorsWrapper());
   }
 
@@ -47,10 +39,8 @@ class ApiService {
             baseUrl,
             data: body,
             queryParameters: query,
-            options: buildCacheOptions(
-              const Duration(days: 5),
-              options: Options(method: method),
-              forceRefresh: forceRefresh,
+            options: Options(
+              method: method,
             ),
           )
           .whenComplete(_alertService.closeLoading);
