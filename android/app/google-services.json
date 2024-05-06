@@ -12,7 +12,20 @@
           "package_name": "com.hamzahllc.ahmedashraf.hamzahllc"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "231227294979-cf001gcc2qbhgeek1uumfg0m8mnkiant.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hamzahllc.ahmedashraf.hamzahllc",
+            "certificate_hash": "f4960dcf3163e92f42badd0232a10c2e98b5ab59"
+          }
+        },
+        {
+          "client_id": "231227294979-kdl2mdigmf78dqsf85p9kb3ncevk80u5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD94Mo1udSZWEMUeNHNIOKa6o0fbqWWQM8"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231227294979-kdl2mdigmf78dqsf85p9kb3ncevk80u5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "231227294979-661v06qm877607qbrra7j90pei66m8pp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hamzahllc.ahmedashraf.hamzahllc"
+              }
+            }
+          ]
         }
       }
     }
